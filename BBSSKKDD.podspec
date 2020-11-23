@@ -10,7 +10,7 @@ Pod::Spec.new do |s|
   # 名称，pod search 搜索的关键词,注意这里一定要和.podspec的名称一样,否则报错
   s.name         = "BBSSKKDD"
   # 版本号/库原代码的版本
-  s.version      = "1.0.1"
+  s.version      = "1.0.2"
   # 简介
   s.summary      = "summary"
   # 项目主页地址
@@ -43,8 +43,9 @@ Pod::Spec.new do |s|
     # 是否使用ARC，如果指定具体文件，则具体的问题使用ARC
     # ss.requires_arc = true
   
-    ss.pod_target_xcconfig = { 'OTHER_LDFLAGS' => '-lObjC' }
-    # ss.info_plist = { 'NSAppTransportSecurity' => 'NSAllowsArbitraryLoads' }
+    # ss.info_plist = { 'NSAppTransportSecurity' => { 'NSAllowsArbitraryLoads' => true } }
+    ss.pod_target_xcconfig = { 'OTHER_LDFLAGS' => '-lObjC', 'EXCLUDED_ARCHS[sdk=iphonesimulator*]' => 'arm64' }
+    s.user_target_xcconfig = { 'OTHER_LDFLAGS' => '-lObjC', 'EXCLUDED_ARCHS[sdk=iphonesimulator*]' => 'arm64' }
   end
 
   s.subspec 'csj' do |ss|
@@ -68,6 +69,13 @@ Pod::Spec.new do |s|
     ss.dependency 'BBSSKKDD/core'
     ss.dependency 'InMobiSDK-China', '~> 7.4.6'
     # lastest: 7.5.0
+  end
+
+  s.subspec 'bxm' do |ss|
+    ss.dependency 'BBSSKKDD/core'
+    ss.ios.vendored_libraries = 'Vendor/BXMSDK/libBXMSDK.a'
+    ss.resource = 'Vendor/BXMSDK/BXMAdSDK.bundle'
+    ss.source_files = 'Vendor/BXMSDK/*.{h,m}'
   end
 
 end
