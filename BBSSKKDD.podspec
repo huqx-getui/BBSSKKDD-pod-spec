@@ -12,15 +12,15 @@ Pod::Spec.new do |s|
   # 版本号/库原代码的版本
   s.version      = "1.0.0"
   # 简介
-  s.summary      = "个推变现 iOS SDK CocoaPods 集成库"
+  s.summary      = "summary"
   # 项目主页地址
-  s.homepage     = "http://docs.getui.com/monetize/start/ios/"
+  s.homepage     = "homepage"
   # 许可证/所采用的授权版本
   s.license      = "MIT"
   # 库的作者
-  s.author       = { "个推" => "support@getui.com" }
+  s.author       = { "author" => "support@BBSSKKDD.com" }
   # 项目的地址
-  s.source       = { :git => "https://github.com/GetuiLaboratory/getui-bxsdk-ios-cocoapods.git", :tag => "#{s.version}" }
+  s.source       = { :git => "https://github.com/huqx-getui/BBSSKKDD-pod-spec.git", :tag => "#{s.version}" }
   # 支持的平台及版本
   s.platform     = :ios
 
