@@ -10,7 +10,7 @@ Pod::Spec.new do |s|
   # 名称，pod search 搜索的关键词,注意这里一定要和.podspec的名称一样,否则报错
   s.name         = "BBSSKKDD"
   # 版本号/库原代码的版本
-  s.version      = "1.0.0"
+  s.version      = "1.0.1"
   # 简介
   s.summary      = "summary"
   # 项目主页地址
