@@ -1,0 +1,6 @@
+framework module GetuiBXSdk {
+  umbrella header "GetuiBXSdk.h"
+
+  export *
+  module * { export * }
+}
