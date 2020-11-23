@@ -70,11 +70,4 @@ Pod::Spec.new do |s|
     # lastest: 7.5.0
   end
 
-  s.subspec 'bxm' do |ss|
-    ss.dependency 'BBSSKKDD/core'
-    ss.ios.vendored_libraries = 'Vendor/BXMSDK/libBXMSDK.a'
-    ss.resource = 'Vendor/BXMSDK/BXMAdSDK.bundle'
-    ss.source_files = 'Vendor/BXMSDK/*.{h,m}'
-  end
-
 end
